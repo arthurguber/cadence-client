@@ -56,6 +56,9 @@ const (
 	// Whereas default does *NOT* reply anything back to the server, fail workflow replies back with a request
 	// to fail the workflow execution.
 	NonDeterministicWorkflowPolicyFailWorkflow = internal.NonDeterministicWorkflowPolicyFailWorkflow
+	// NonDeterministicWorkflowPolicyContinueAsNew behaves as if non-deterministic workflow returns
+	// ContinueAsNewError to start afresh.
+	NonDeterministicWorkflowPolicyContinueAsNew = internal.NonDeterministicWorkflowPolicyContinueAsNew
 )
 
 // New creates an instance of worker for managing workflow and activity executions.

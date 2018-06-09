@@ -710,6 +710,8 @@ ProcessEvents:
 				eventHandler.Complete(nil, NewCustomError("nondeterministic workflow", err.Error()))
 			case NonDeterministicWorkflowPolicyBlockWorkflow:
 				return nil, err
+			case NonDeterministicWorkflowPolicyContinueAsNew:
+				return nil, err
 			default:
 				panic(fmt.Sprintf("unknown mismatched workflow history policy."))
 			}

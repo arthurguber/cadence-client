@@ -169,6 +169,9 @@ const (
 	// Whereas default does *NOT* reply anything back to the server, fail workflow replies back with a request
 	// to fail the workflow execution.
 	NonDeterministicWorkflowPolicyFailWorkflow
+	// NonDeterministicWorkflowPolicyContinueAsNew behaves as if non-deterministic workflow returns
+	// ContinueAsNewError to start afresh.
+	NonDeterministicWorkflowPolicyContinueAsNew
 )
 
 // NewWorker creates an instance of worker for managing workflow and activity executions.
